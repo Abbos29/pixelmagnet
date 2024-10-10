@@ -1,0 +1,51 @@
+.title {
+    text-align: center;
+    // font-size: 24px;
+    font-size: clamp(1rem, 0.907rem + 0.79vw, 1.5rem);
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.wrap {
+    margin-top: 40px;
+
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    align-items: center;
+
+    h2 {
+        // font-size: 48px;
+        font-size: clamp(1rem, 0.228rem + 3.17vw, 3rem);
+        font-weight: 600;
+        line-height: 1.2;
+        text-transform: uppercase;
+        color: $colorGray;
+
+        display: inline-block;
+        // margin-right: 50px;
+        margin-right: clamp(1.5rem, 0.873rem + 2.57vw, 3.125rem);
+
+        &.orange {
+            color: $colorOrange;
+        }
+
+        // &:nth-child(odd) {
+        //     color: $colorOrange;
+        // }
+    }
+}
+
+.marquee {
+    display: inline-block;
+    animation: marquee 35s linear infinite;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
