@@ -1,0 +1,9 @@
+.title {
+    // font-size: 96px;
+    font-size: clamp(2rem, 0.455rem + 6.34vw, 6rem);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: $colorDark;
+}

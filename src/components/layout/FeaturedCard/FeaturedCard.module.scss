@@ -1,0 +1,32 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    // gap: 16px;
+    gap: clamp(0.75rem, 0.653rem + 0.4vw, 1rem);
+
+    align-items: flex-start;
+
+    cursor: pointer;
+
+    img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        // font-size: 48px;
+        font-size: clamp(2rem, 1.614rem + 1.58vw, 3rem);
+        font-weight: 900;
+        // line-height: 1.2;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+    }
+
+    p {
+        // font-size: 20px;
+        font-size: clamp(0.875rem, 0.73rem + 0.59vw, 1.25rem);
+        font-weight: 700;
+        line-height: 1.2;
+        color: $colorGray;
+    }
+}
