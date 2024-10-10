@@ -1,0 +1,183 @@
+.hero {
+    padding-top: 30px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.titles {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    h1 {
+        text-transform: uppercase;
+        max-width: 880px;
+        // font-size: 96px;
+        font-size: clamp(3rem, 1.842rem + 4.75vw, 6rem);
+        font-weight: 900;
+        line-height: 1.2;
+        letter-spacing: -0.03em;
+
+        span {
+            display: inline-block;
+            // min-width: 200px;
+            min-width: clamp(7.5rem, 5.569rem + 7.92vw, 12.5rem);
+            border-radius: 200px;
+            // border: 22px solid $colorBlue;
+            border: clamp(0.875rem, 0.73rem + 0.59vw, 1.25rem) solid $colorBlue;
+            // height: 80px;
+            height: clamp(2.813rem, 1.968rem + 3.47vw, 5rem);
+            position: relative;
+            top: 8px;
+        }
+    }
+
+    p {
+        max-width: 465px;
+        // font-size: 20px;
+        font-size: clamp(1rem, 0.903rem + 0.4vw, 1.25rem);
+        font-weight: 400;
+        line-height: 1.5;
+        color: $colorGray;
+        letter-spacing: 0.01em;
+    }
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    min-width: max-content;
+
+    @media (max-width: 992px) {
+        display: none;
+    }
+
+    p {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: $colorGray;
+        line-height: 1.2;
+        font-size: 20px;
+
+        &:first-child {
+            color: $colorOrange;
+            font-weight: 700;
+        }
+        &:last-child {
+            color: $colorBlue;
+        }
+    }
+}
+
+.wrap {
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 16px;
+    padding-top: 50px;
+    border-radius: 24px;
+
+    background-image: url(/hero-bg-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: stretch;
+        background-image: none;
+        padding: 0;
+        margin-top: 25px;
+    }
+}
+
+.num {
+    padding: 15px;
+    max-width: 530px;
+    width: 100%;
+
+
+    @media (max-width: 768px) {
+        background-image: url(/hero-bg-1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        max-width: 100%;
+
+        display: flex;
+        justify-content: center;
+        padding-top: 300px;
+        border-radius: 20px;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        color: $colorWhite;
+
+        background-color: $colorOrange;
+        padding: 10px 28px;
+        border-radius: 100px;
+
+        width: max-content;
+        h2 {
+            // font-size: 90px;
+            font-size: clamp(1.875rem, 0.427rem + 5.94vw, 5.625rem);
+            font-weight: 700;
+            line-height: 1;
+        }
+        h3 {
+            // font-size: 24px;
+            font-size: clamp(1.25rem, 1.153rem + 0.4vw, 1.5rem);
+            font-weight: 900;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+        }
+    }
+}
+
+.quote {
+    max-width: 355px;
+    border-radius: 12px;
+    padding: 22px 16px;
+    background-color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    p {
+        // font-size: 20px;
+        font-size: clamp(1rem, 0.903rem + 0.4vw, 1.25rem);
+        font-weight: 400;
+        line-height: 1.5;
+        letter-spacing: 0.01em;
+    }
+
+    b {
+        font-weight: 600;
+        color: $colorBlue;
+        // font-size: 20px;
+        font-size: clamp(1rem, 0.903rem + 0.4vw, 1.25rem);
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    @media (max-width: 768px) {
+        background-color: $colorLightBlue;
+        max-width: 100%;
+        margin-top: 16px;
+    }
+}

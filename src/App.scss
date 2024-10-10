@@ -2,29 +2,15 @@
     font-family: "Urbanist", sans-serif;
 }
 
+body {
+    color: $colorDark;
+}
+
 section {
     padding: 50px 0;
 }
 
-h2 {
-    color: #000;
 
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 36px;
-    /* 128.571% */
-}
-
-h3 {
-    color: #000;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 28px;
-    /* 140% */
-    margin-bottom: 20px;
-}
 
 .container {
     max-width: 1375px;
