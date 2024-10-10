@@ -1,0 +1,148 @@
+.header {
+    border-bottom: 2px solid #f1f1f1;
+    padding: 40px 0px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // gap: 60px;
+    gap: clamp(1.875rem, 1.125rem + 3vw, 3.75rem);
+
+    position: relative;
+}
+
+.logo {
+    margin-right: auto;
+
+    @media (max-width: 768px) {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 220px;
+
+        img {
+            width: 100%;
+        }
+    }
+    @media (max-width: 480px) {
+        max-width: 160px;
+    }
+}
+
+.burger {
+    display: none;
+
+    @media (max-width: 992px) {
+        display: block;
+        // position: absolute;
+        z-index: 11;
+    }
+
+    @media (max-width: 768px) {
+        right: 10px;
+        position: absolute;
+    }
+
+    path {
+        transition: 0.3s;
+    }
+    &.active {
+        path {
+            stroke: $colorWhite;
+        }
+    }
+}
+
+.menu {
+    display: flex;
+    // gap: 50px;
+    gap: clamp(2.188rem, 1.813rem + 1.5vw, 3.125rem);
+    align-items: center;
+
+    a {
+        color: $colorGray;
+        font-size: 20px;
+        letter-spacing: 1%;
+
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        align-items: center;
+
+        &:hover {
+            &::after {
+                width: 100%;
+            }
+        }
+
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 0%;
+            height: 1px;
+            transition: 0.5s;
+            background-color: $colorGray;
+        }
+    }
+
+    @media (max-width: 992px) {
+        position: fixed;
+        top: 0;
+        right: -110%;
+        width: 100%;
+        height: 100dvh;
+        background-color: $colorGray;
+        z-index: 10;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        transition: right 0.5s;
+
+        a {
+            color: $colorWhite !important;
+        }
+
+        &.active {
+            right: 0;
+        }
+    }
+}
+
+.nav_btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 20px;
+    color: $colorGray;
+    font-size: 20px;
+    border-radius: 100px;
+    background: none;
+    letter-spacing: 1%;
+
+    border: 1px solid $colorGray;
+
+    transition: all 0.5s;
+
+    path {
+    transition: all 0.5s;
+
+    }
+
+    &:hover {
+        color: $colorWhite;
+        background-color: $colorGray;
+
+        path {
+            fill: $colorWhite;
+        }
+    }
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
