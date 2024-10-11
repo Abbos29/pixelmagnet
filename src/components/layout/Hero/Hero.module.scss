@@ -33,6 +33,8 @@
             height: clamp(2.813rem, 1.968rem + 3.47vw, 5rem);
             position: relative;
             top: 8px;
+
+            animation: bounce 0.8s infinite alternate;
         }
     }
 
@@ -179,5 +181,13 @@
         background-color: $colorLightBlue;
         max-width: 100%;
         margin-top: 16px;
+    }
+}
+
+
+
+@keyframes bounce {
+    100% {
+        transform: translateX(30px);
     }
 }
