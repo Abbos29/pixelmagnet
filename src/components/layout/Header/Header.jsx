@@ -10,6 +10,10 @@ const Header = () => {
     const toggleMenu = () => {
         setIsActive(prev => !prev)
     }
+
+    const closeMenu =() => {
+        setIsActive(false)
+    }
     
     return (
         <header className={s.header}>
@@ -21,11 +25,11 @@ const Header = () => {
                     </Link>
 
                     <div className={`${s.menu} ${isActive ? s.active : ''}`}>
-                        <Link to="/">Home</Link>
-                        <Link to="/about">About us</Link>
-                        <Link to="/service">Service</Link>
-                        <Link to="/projects">Projects</Link>
-                        <Link to="/blog">Blog</Link>
+                        <Link onClick={closeMenu} to="/">Home</Link>
+                        <Link onClick={closeMenu} to="/about">About us</Link>
+                        <Link onClick={closeMenu} to="/service">Service</Link>
+                        <Link onClick={closeMenu} to="/projects">Projects</Link>
+                        <Link onClick={closeMenu} to="/blog">Blog</Link>
                     </div>
 
                     <button className={s.nav_btn}>

@@ -123,10 +123,13 @@
         margin-right: auto;
         line-height: 1.6;
         font-size: clamp(0.75rem, 0.651rem + 0.41vw, 1rem);
-text-align: center;
-margin: 0 auto;
-color: $colorWhite;
-opacity: 0.7;
+        text-align: center;
+        color: $colorWhite;
+        opacity: 0.7;
+
+        @media (max-width: 480px) {
+            margin: 0 auto;
+        }
     }
 
     a {

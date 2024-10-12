@@ -7,6 +7,7 @@ const Hero = () => {
                 <div className={s.wrapper}>
                     <div className={s.titles}>
                         <h1>Begin your <span></span>  Digital Odyssey</h1>
+                        <h1>Begin your Digital <span></span> Odyssey</h1>
                         <p>We're the explorers of the digital frontier. Join us on an epic odyssey to discover the uncharted territories of online success.</p>
                     </div>
 
