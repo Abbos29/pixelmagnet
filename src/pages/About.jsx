@@ -1,8 +1,17 @@
 import React from 'react'
+import AboutHero from '../components/layout/AboutHero/AboutHero'
+import Who from '../components/layout/Who/Who'
+import Team from '../components/layout/Team/Team'
+import Lets from '../components/layout/Lets/Lets'
 
 const About = () => {
   return (
-    <div>About</div>
+    <>
+      <AboutHero />
+      <Who />
+      <Team />
+      <Lets />
+    </>
   )
 }
 
