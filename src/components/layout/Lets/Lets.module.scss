@@ -8,15 +8,23 @@
 
     position: relative;
     z-index: -2;
-    padding: 100px 0;
+    // padding: 100px 0;
+    padding: clamp(4.063rem, 3.196rem + 3.55vw, 6.25rem) 0;
 }
 
 .wrap {
     position: relative;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
     h2 {
         text-transform: uppercase;
-        font-size: 96px;
+        // font-size: 96px;
+        font-size: clamp(2rem, 0.416rem + 6.5vw, 6rem);
         font-weight: 900;
         line-height: 1.2;
         letter-spacing: -0.03em;
@@ -48,8 +56,10 @@
     }
 
     h3 {
-        width: 200px;
-        height: 200px;
+        // width: 200px;
+        width: clamp(9.063rem, 7.701rem + 5.58vw, 12.5rem);
+        // height: 200px;
+        aspect-ratio: 1;
         border-radius: 50%;
 
         font-size: 20px;
@@ -63,7 +73,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 12px solid #156AD4;
+        // border: 12px solid #156AD4;
+        border: clamp(0.438rem, 0.314rem + 0.51vw, 0.75rem) solid #156ad4;
 
         position: absolute;
         bottom: 17%;
@@ -73,9 +84,12 @@
         animation: scale 0.7s infinite alternate;
 
         cursor: pointer;
+
+        @media (max-width: 480px) {
+            position: static;
+        }
     }
 }
-
 
 @keyframes scale {
     100% {
