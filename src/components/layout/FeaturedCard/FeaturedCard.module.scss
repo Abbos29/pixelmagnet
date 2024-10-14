@@ -4,13 +4,19 @@
     // gap: 16px;
     gap: clamp(0.75rem, 0.653rem + 0.4vw, 1rem);
 
+    padding-bottom: 20px;
+
     align-items: flex-start;
 
     cursor: pointer;
 
+    break-inside: avoid; /* предотвращает разрывы карточек между колонками */
+
+
     img {
         width: 100%;
         margin-bottom: 10px;
+        border-radius: 20px;
     }
 
     h3 {

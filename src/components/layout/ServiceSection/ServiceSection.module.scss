@@ -1,0 +1,100 @@
+.wrap {
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr;
+    // gap: 30px;
+    gap: clamp(1.375rem, 1.177rem + 0.81vw, 1.875rem);
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 660px;
+
+    h3 {
+        color: $colorOrange;
+        // font-size: 32px;
+        font-size: clamp(1.5rem, 1.302rem + 0.81vw, 2rem);
+        font-weight: 500;
+        line-height: 1.2;
+        text-transform: uppercase;
+    }
+
+    h1 {
+        // font-size: 64px;
+        // font-size: clamp(3rem, 2.604rem + 1.62vw, 4rem);
+        font-size: clamp(2.5rem, 0.602rem + 3.95vw, 4rem);
+        font-weight: 900;
+        line-height: 1.3;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    img {
+        width: 100%;
+    }
+
+    p {
+        // font-size: 20px;
+        font-size: clamp(1rem, 0.901rem + 0.41vw, 1.25rem);
+        font-weight: 400;
+        line-height: 1.6;
+        letter-spacing: 0.01em;
+        color: $colorGray;
+
+        // margin-top: 40px;
+        margin-top: clamp(0rem, -1.026rem + 4.1vw, 2.5rem);
+    }
+}
+
+.serviceSection {
+    overflow: hidden;
+}
+
+.menu {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: clamp(0rem, -1.026rem + 4.1vw, 2.5rem);
+
+    p {
+        // font-size: 20px;
+        font-size: clamp(1rem, 0.901rem + 0.41vw, 1.25rem);
+        font-weight: 400;
+        line-height: 1.6;
+        letter-spacing: 0.01em;
+        color: $colorGray;
+
+        // margin-top: 40px;
+
+        max-width: 500px;
+    }
+
+    ul {
+        columns: 2; 
+        gap: 40px;
+        list-style-position: inside;
+        padding-left: 40px;
+        
+        li {
+            list-style-type: disc;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.2;
+            letter-spacing: 0.01em;
+            color: $colorGray;
+            margin-bottom: 10px;
+        }
+    }
+}

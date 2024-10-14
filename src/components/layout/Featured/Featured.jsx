@@ -1,13 +1,9 @@
 import SecitonTitle from '../../ui/SectionTitle/SecitonTitle'
 import s from './Featured.module.scss'
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Scrollbar } from 'swiper/modules'
-import 'swiper/css';
-import 'swiper/css/scrollbar';
+import Slider from '../Slider/Slider.jsx';
 
 import FeaturedData from './FeaturedData.js'
-import FeaturedCard from '../FeaturedCard/FeaturedCard.jsx';
 
 const Featured = () => {
     return (
@@ -26,35 +22,7 @@ const Featured = () => {
             </div>
 
             <div className={`${s.container} container`}>
-                <Swiper
-                    scrollbar={{
-                        hide: true,
-                    }}
-                    slidesPerView={1.4}
-                    spaceBetween={16}
-                    modules={[Scrollbar]}
-                    className={s.feat_swiper}
-                    breakpoints={{
-                        900: {
-                            slidesPerView: 2.6,
-                            spaceBetween: 32
-                        },
-                        500: {
-                            slidesPerView: 2.1,
-                            spaceBetween: 16
-
-                        }
-                    }}
-                >
-
-                    {FeaturedData.map(card => (
-                        <SwiperSlide key={card.id}>
-                            <FeaturedCard data={card} />
-                        </SwiperSlide>
-                    ))}
-
-                </Swiper>
-
+                <Slider data={FeaturedData} />
             </div>
         </section>
     )

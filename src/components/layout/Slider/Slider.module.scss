@@ -1,0 +1,14 @@
+.feat_swiper {
+    margin-top: 40px !important;
+    padding-bottom: 100px;
+    overflow: visible !important;
+
+    &.mini {
+        img {
+            aspect-ratio: 1.5/1;
+            object-fit: cover;
+            border-radius: 20px;
+
+        }
+    }
+}

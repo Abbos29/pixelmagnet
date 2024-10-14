@@ -26,10 +26,10 @@ const Footer = () => {
 
                     <div className={s.menu}>
                         <div className={s.col}>
-                            <a href="">Service</a>
-                            <a href="">about</a>
-                            <a href="">Projects</a>
-                            <a href="">BLOG</a>
+                            <a href="/service">Service</a>
+                            <a href="/about">about</a>
+                            <a href="/projects">Projects</a>
+                            <a href="/blog">BLOG</a>
                         </div>
                         <div className={s.col}>
                             <a href="">instagram</a>

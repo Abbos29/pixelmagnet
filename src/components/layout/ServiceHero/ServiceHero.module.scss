@@ -1,0 +1,139 @@
+.wrap {
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr;
+    // gap: 30px;
+    gap: clamp(1.375rem, 1.177rem + 0.81vw, 1.875rem);
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 660px;
+
+    h3 {
+        color: $colorOrange;
+        // font-size: 32px;
+        font-size: clamp(1.5rem, 1.302rem + 0.81vw, 2rem);
+        font-weight: 500;
+        line-height: 1.2;
+        text-transform: uppercase;
+    }
+
+    h1 {
+        // font-size: 64px;
+        // font-size: clamp(3rem, 2.604rem + 1.62vw, 4rem);
+        font-size: clamp(2.5rem, 0.602rem + 3.95vw, 4rem);
+        font-weight: 900;
+        line-height: 1.3;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    img {
+        width: 100%;
+    }
+
+    p {
+        // font-size: 20px;
+        font-size: clamp(1rem, 0.901rem + 0.41vw, 1.25rem);
+        font-weight: 400;
+        line-height: 1.6;
+        letter-spacing: 0.01em;
+        color: $colorGray;
+
+        // margin-top: 40px;
+        margin-top: clamp(0rem, -1.026rem + 4.1vw, 2.5rem);
+    }
+}
+
+.grid {
+    // margin-top: 40px;
+    margin-top: clamp(1.625rem, 1.266rem + 1.44vw, 2.5rem);
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1.8fr 1fr 1fr 1fr;
+    // gap: 20px 20px;
+    gap: clamp(1rem, 0.795rem + 0.82vw, 1.5rem);
+    grid-template-areas:
+        "card_1 card_2 card_3 card_6"
+        "card_1 card_4 card_5 card_6";
+
+    @media (max-width: 992px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "card_1 card_1 card_1"
+            "card_2 card_3 card_4"
+            "card_5 card_6 card_6";
+    }
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "card_1 card_1"
+            "card_2 card_3"
+            "card_4 card_5"
+            "card_6 card_6";
+    }
+
+    .card_1 {
+        grid-area: card_1;
+        height: 100%;
+        object-fit: cover;
+        object-position: right bottom;
+
+        @media (max-width: 992px) {
+            //   height: 460px;
+
+            aspect-ratio: 1.7/1;
+        }
+    }
+    .card_2 {
+        grid-area: card_2;
+    }
+    .card_3 {
+        grid-area: card_3;
+    }
+    .card_4 {
+        grid-area: card_4;
+    }
+    .card_5 {
+        grid-area: card_5;
+    }
+    .card_6 {
+        grid-area: card_6;
+    }
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.card_6 {
+    display: flex;
+    flex-direction: column;
+    background-color: $colorOrange;
+    padding: 25px 15px; 
+
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+
+    p {
+        color: $colorWhite;
+        line-height: 1.3;
+    }
+}
