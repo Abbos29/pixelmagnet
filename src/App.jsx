@@ -10,6 +10,7 @@ import ScrollToTop from './components/ui/ScrollToTop/ScrollToTop';
 import Service from './pages/Service';
 import Projects from './pages/Projects';
 import Blog from './pages/Blog';
+import Article from './pages/Article';
 
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
         <Route path='/service' element={<Service />} />
         <Route path='/projects' element={<Projects />} />
         <Route path='/blog' element={<Blog />} />
+        <Route path='/article' element={<Article />} />
 
       </Routes>
 

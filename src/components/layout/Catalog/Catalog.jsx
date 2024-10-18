@@ -4,7 +4,10 @@ import s from './Catalog.module.scss'
 import CatalogData from './CatalogData.js'
 
 
+
+
 const Catalog = () => {
+    
     return (
         <section className={s.catalog}>
             <div className="container">

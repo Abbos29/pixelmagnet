@@ -4,6 +4,8 @@
 
 body {
     color: $colorDark;
+    overflow-x: hidden;
+    overflow-y: visible;
 }
 
 section {

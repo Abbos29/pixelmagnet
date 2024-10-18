@@ -1,0 +1,10 @@
+.related {
+    // margin-top: 100px;
+    margin-top: clamp(3.75rem, 2.76rem + 4.06vw, 6.25rem);
+    width: 100%;
+
+    h3 {
+        font-size: clamp(1rem, 0.654rem + 1.42vw, 1.875rem) !important;
+        line-height: 1.2 !important;
+    }
+}

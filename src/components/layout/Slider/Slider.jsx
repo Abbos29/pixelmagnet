@@ -22,7 +22,7 @@ const Slider = ({ data, variant }) => {
                 className={sliderClass} // Используем условный класс
                 breakpoints={{
                     900: {
-                        slidesPerView: 2.6,
+                        slidesPerView: 2.3,
                         spaceBetween: 32,
                     },
                     500: {
