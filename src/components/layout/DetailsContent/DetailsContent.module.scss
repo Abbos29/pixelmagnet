@@ -1,0 +1,99 @@
+.detailsContent {
+    h3 {
+        // font-size: 48px;
+        font-size: clamp(2rem, 1.604rem + 1.62vw, 3rem);
+        font-weight: 900;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+
+        white-space: nowrap;
+    }
+
+    p {
+        // font-size: 20px;
+        font-size: clamp(1rem, 0.901rem + 0.41vw, 1.25rem);
+        font-weight: 400;
+        line-height: 1.6;
+        letter-spacing: 0.8px;
+        color: $colorGray;
+    }
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 765px;
+
+    margin-bottom: 45px;
+}
+
+.wrap {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    gap: 24px;
+
+    @media (max-width: 992px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        h5 {
+            font-size: clamp(1rem, 0.901rem + 0.41vw, 1.25rem);
+            font-weight: 600;
+            color: $colorOrange;
+        }
+    }
+}
+
+.grid {
+    // margin-top: 100px;
+    margin-top: clamp(4.375rem, 3.633rem + 3.05vw, 6.25rem);
+
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    // gap: 24px;
+    gap: clamp(1rem, 0.802rem + 0.81vw, 1.5rem);
+    grid-template-areas:
+        "img1 img1 img1 img1 img1 img2 img2 img2"
+        "img3 img3 img3 img4 img4 img4 img4 img4";
+
+    @media (max-width: 768px) {
+        grid-template-areas: unset !important;
+        grid-template-columns: 1fr !important;
+
+        img {
+            grid-area: auto !important;
+        }
+    }
+
+    .img1 {
+        grid-area: img1;
+    }
+    .img2 {
+        grid-area: img2;
+    }
+    .img3 {
+        grid-area: img3;
+    }
+    .img4 {
+        grid-area: img4;
+    }
+
+    img {
+        width: 100%;
+        border-radius: 28px;
+        height: 100%;
+        object-fit: cover;
+    }
+}

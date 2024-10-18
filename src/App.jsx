@@ -11,6 +11,7 @@ import Service from './pages/Service';
 import Projects from './pages/Projects';
 import Blog from './pages/Blog';
 import Article from './pages/Article';
+import Details from './pages/Details';
 
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
         <Route path='/projects' element={<Projects />} />
         <Route path='/blog' element={<Blog />} />
         <Route path='/article' element={<Article />} />
+        <Route path='/details' element={<Details />} />
 
       </Routes>
 
