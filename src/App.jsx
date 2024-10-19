@@ -12,6 +12,7 @@ import Projects from './pages/Projects';
 import Blog from './pages/Blog';
 import Article from './pages/Article';
 import Details from './pages/Details';
+import Touch from './pages/Touch';
 
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
         <Route path='/blog' element={<Blog />} />
         <Route path='/article' element={<Article />} />
         <Route path='/details' element={<Details />} />
+        <Route path='/touch' element={<Touch />} />
 
       </Routes>
 

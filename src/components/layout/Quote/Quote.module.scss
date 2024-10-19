@@ -1,0 +1,52 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    // gap: 45px;
+    gap: clamp(2.25rem, 2.027rem + 0.91vw, 2.813rem);
+
+    > svg {
+        width: clamp(2.625rem, 2.279rem + 1.42vw, 3.5rem);
+        aspect-ratio: 1;
+    }
+
+    h2 {
+        // font-size: 48px;
+        font-size: clamp(1.5rem, 0.906rem + 2.44vw, 3rem);
+        font-weight: 500;
+        line-height: 1.4;
+        letter-spacing: 0.01em;
+    }
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    img {
+        aspect-ratio: 1;
+        // width: 72px;
+        width: clamp(3.5rem, 3.104rem + 1.62vw, 4.5rem);
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        h4 {
+            // font-size: 24px;
+            font-size: clamp(1rem, 0.802rem + 0.81vw, 1.5rem);
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        p {
+            // font-size: 16px;
+            font-size: clamp(0.875rem, 0.826rem + 0.2vw, 1rem);
+            font-weight: 500;
+            line-height: 1.3;
+            color: $colorGray;
+        }
+    }
+}
