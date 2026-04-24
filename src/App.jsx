@@ -13,9 +13,14 @@ import Blog from './pages/Blog';
 import Article from './pages/Article';
 import Details from './pages/Details';
 import Touch from './pages/Touch';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
+import { useLenisReveal } from './hooks/useLenisReveal';
 
 
 const App = () => {
+  useLenisReveal();
+
   return (
     <>
       <ScrollToTop />
@@ -30,6 +35,8 @@ const App = () => {
         <Route path='/article' element={<Article />} />
         <Route path='/details' element={<Details />} />
         <Route path='/touch' element={<Touch />} />
+        <Route path='/privacy' element={<Privacy />} />
+        <Route path='/terms' element={<Terms />} />
 
       </Routes>
 
