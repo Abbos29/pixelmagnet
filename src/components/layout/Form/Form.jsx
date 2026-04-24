@@ -1,10 +1,16 @@
 import s from './Form.module.scss'
+import { Link } from 'react-router-dom';
 
 const Form = () => {
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        window.location.href = 'mailto:info@pixelmagnet.com?subject=New%20Project%20Request';
+    };
+
     return (
         <section className={s.form}>
             <div className="container">
-                <form action="">
+                <form onSubmit={handleSubmit}>
                     <div className={s.row}>
                         <div className={s.col}>
                             <div>
@@ -58,10 +64,10 @@ const Form = () => {
                         <p>Summary*</p>
                         <textarea name="" id="" placeholder='Briefly tell us about your projects'></textarea>
 
-                        <b>By clicking the submit button you agree to our <a href="">Privacy Policy</a> terms.</b>
+                        <b>By clicking the submit button you agree to our <Link to="/privacy">Privacy Policy</Link> terms.</b>
                     </div>
 
-                    <button className={s.btn}>Submit</button>
+                    <button type="submit" className={s.btn}>Submit</button>
                 </form>
 
             </div>

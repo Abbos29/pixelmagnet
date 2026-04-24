@@ -1,5 +1,6 @@
 import SecitonTitle from '../../ui/SectionTitle/SecitonTitle'
 import s from './What.module.scss'
+import { Link } from 'react-router-dom';
 
 const What = () => {
     return (
@@ -7,13 +8,13 @@ const What = () => {
             <div className="container">
                 <div className={s.top}>
                     <SecitonTitle>What we do</SecitonTitle>
-                    <a href="">
+                    <Link to="/service">
                         View all
                         <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M21.645 9.39502L30.75 18.5L21.645 27.605" stroke="#156AD4" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
                             <path d="M5.25 18.5H30.495" stroke="#156AD4" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
-                    </a>
+                    </Link>
                 </div>
 
                 <div className={s.wrapper}>

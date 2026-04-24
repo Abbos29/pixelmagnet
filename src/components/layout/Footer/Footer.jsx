@@ -1,4 +1,5 @@
 import s from './Footer.module.scss'
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -10,13 +11,13 @@ const Footer = () => {
                         <div className={s.row}>
                             <div className={s.col}>
                                 <h4>JAKARTA, id</h4>
-                                <a href="">Jl.Jend Soedirman
+                                <a href="https://maps.google.com/?q=Jl.Jend+Soedirman+blok+1+kav+2+Jakarta" target="_blank" rel="noreferrer">Jl.Jend Soedirman
                                     blok 1 kav 2. 11220</a>
                             </div>
                             <div className={s.col}>
                                 <h4>Contact information</h4>
-                                <a href="">INFO@PIXELMAGNET.COM</a>
-                                <a href="">011-123-456</a>
+                                <a href="mailto:info@pixelmagnet.com">INFO@PIXELMAGNET.COM</a>
+                                <a href="tel:+011123456">011-123-456</a>
                             </div>
                         </div>
 
@@ -26,16 +27,16 @@ const Footer = () => {
 
                     <div className={s.menu}>
                         <div className={s.col}>
-                            <a href="/service">Service</a>
-                            <a href="/about">about</a>
-                            <a href="/projects">Projects</a>
-                            <a href="/blog">BLOG</a>
+                            <Link to="/service">Service</Link>
+                            <Link to="/about">about</Link>
+                            <Link to="/projects">Projects</Link>
+                            <Link to="/blog">BLOG</Link>
                         </div>
                         <div className={s.col}>
-                            <a href="">instagram</a>
-                            <a href="">x</a>
-                            <a href="">facebook</a>
-                            <a href="">youtube</a>
+                            <a href="https://instagram.com/" target="_blank" rel="noreferrer">instagram</a>
+                            <a href="https://x.com/" target="_blank" rel="noreferrer">x</a>
+                            <a href="https://facebook.com/" target="_blank" rel="noreferrer">facebook</a>
+                            <a href="https://youtube.com/" target="_blank" rel="noreferrer">youtube</a>
                         </div>
                     </div>
                 </div>
@@ -45,8 +46,8 @@ const Footer = () => {
 
                     <div>
 
-                        <a href="">Terms of service</a>
-                        <a href="">Privacy Policy</a>
+                        <Link to="/terms">Terms of service</Link>
+                        <Link to="/privacy">Privacy Policy</Link>
                     </div>
                 </div>
             </div>

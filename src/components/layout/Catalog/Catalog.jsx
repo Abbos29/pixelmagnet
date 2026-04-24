@@ -1,5 +1,6 @@
 import FeaturedCard from '../FeaturedCard/FeaturedCard.jsx'
 import s from './Catalog.module.scss'
+import { useState } from 'react';
 
 import CatalogData from './CatalogData.js'
 
@@ -7,7 +8,9 @@ import CatalogData from './CatalogData.js'
 
 
 const Catalog = () => {
-    
+    const [isExpanded, setIsExpanded] = useState(false);
+    const visibleCards = isExpanded ? CatalogData : CatalogData.slice(0, 6);
+
     return (
         <section className={s.catalog}>
             <div className="container">
@@ -22,12 +25,14 @@ const Catalog = () => {
                 </div>
 
                 <div className={s.cards}>
-                    {CatalogData.map((card) => (
+                    {visibleCards.map((card) => (
                         <FeaturedCard key={card.id} data={card} />
                     ))}
                 </div>
 
-                <button className={s.btn}>Load more</button>
+                <button type="button" className={s.btn} onClick={() => setIsExpanded((prev) => !prev)}>
+                    {isExpanded ? 'Show less' : 'Load more'}
+                </button>
             </div>
         </section>
     )
