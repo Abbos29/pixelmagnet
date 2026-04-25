@@ -1,27 +1,14 @@
 class Lenis {
-    constructor(options = {}) {
-        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        this.smoothWheel = options.smoothWheel ?? !reducedMotion;
-        this.wheelMultiplier = options.wheelMultiplier ?? 1.2;
-        this.touchMultiplier = options.touchMultiplier ?? 1.1;
-        this.duration = options.duration ?? 0.7;
+    constructor() {
         this.targetY = window.scrollY;
         this.currentY = window.scrollY;
-        this.lerp = Math.max(0.16, Math.min(0.42, 1 / (this.duration * 6)));
+        this.lerp = 0.1;
         this.onWheel = this.onWheel.bind(this);
-
-        if (this.smoothWheel) {
-            window.addEventListener('wheel', this.onWheel, { passive: false });
-        }
+        window.addEventListener('wheel', this.onWheel, { passive: false });
     }
 
     onWheel(event) {
-        if (!this.smoothWheel) {
-            return;
-        }
-
-        const multiplier = event.deltaMode === 1 ? this.touchMultiplier : this.wheelMultiplier;
-        const nextY = this.targetY + (event.deltaY * multiplier);
+        const nextY = this.targetY + event.deltaY;
         const maxY = document.documentElement.scrollHeight - window.innerHeight;
         this.targetY = Math.max(0, Math.min(nextY, Math.max(maxY, 0)));
         event.preventDefault();
@@ -36,9 +23,7 @@ class Lenis {
     }
 
     destroy() {
-        if (this.smoothWheel) {
-            window.removeEventListener('wheel', this.onWheel);
-        }
+        window.removeEventListener('wheel', this.onWheel);
     }
 }
 

@@ -12,10 +12,10 @@ export const useLenisReveal = () => {
                 const Lenis = lenisModule.default;
 
                 lenis = new Lenis({
-                    duration: 0.6,
+                    duration: 1.2,
                     smoothWheel: true,
-                    wheelMultiplier: 1.35,
-                    touchMultiplier: 1.25,
+                    wheelMultiplier: 0.95,
+                    touchMultiplier: 1.1,
                 });
 
                 const raf = (time) => {
