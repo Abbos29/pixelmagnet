@@ -14,7 +14,8 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src') // Абсолютный путь для импорта
+      '@': path.resolve(__dirname, './src'), // Абсолютный путь для импорта
+      lenis: path.resolve(__dirname, './src/vendors/lenis.js')
     }
   }
 });
